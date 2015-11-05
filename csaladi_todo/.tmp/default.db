@@ -1,0 +1,159 @@
+{
+  "data": {
+    "error": [],
+    "todo": [],
+    "user": [
+      {
+        "surname": "K",
+        "forename": "K",
+        "neptun": "SHSVOS",
+        "password": "almafa",
+        "avatar": "",
+        "role": "operator",
+        "createdAt": "2015-10-16T07:12:13.282Z",
+        "updatedAt": "2015-10-16T07:12:13.282Z",
+        "id": 1
+      },
+      {
+        "surname": "K",
+        "forename": "S",
+        "neptun": "AAAA",
+        "password": "$2a$10$gNRMti2HhU01HMDWqwsJEOaQYF8pY63KxF3qRkfS7i0OuvIoOrQfq",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-10-16T07:35:52.625Z",
+        "updatedAt": "2015-10-16T07:35:52.625Z",
+        "id": 2
+      },
+      {
+        "name": "bence",
+        "password": "$2a$10$8PWdGrW078tzk3lxZgPYy.Bu8f94QUI.JMPxyXVJgwFYnDrflMGtG",
+        "role": "riporter",
+        "createdAt": "2015-11-05T17:56:24.886Z",
+        "updatedAt": "2015-11-05T17:56:24.886Z",
+        "id": 3
+      },
+      {
+        "name": "gantal",
+        "password": "$2a$10$eBssQb7kvLrI2aNXPmkKOuexAJY2.U/mAz2BromjeMNeQfMY4sSvm",
+        "role": "riporter",
+        "createdAt": "2015-11-05T18:11:58.251Z",
+        "updatedAt": "2015-11-05T18:11:58.251Z",
+        "id": 4
+      }
+    ]
+  },
+  "schema": {
+    "error": {
+      "date": {
+        "type": "datetime"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "new",
+          "assigned",
+          "success",
+          "rejected",
+          "pending"
+        ]
+      },
+      "location": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "user": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "todo": {
+      "date": {
+        "type": "datetime"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "new",
+          "assigned",
+          "success",
+          "rejected",
+          "pending"
+        ]
+      },
+      "description": {
+        "type": "string"
+      },
+      "user": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "user": {
+      "name": {
+        "type": "string",
+        "unique": true
+      },
+      "password": {
+        "type": "string"
+      },
+      "role": {
+        "type": "string",
+        "enum": [
+          "riporter",
+          "operator"
+        ],
+        "defaultsTo": "riporter"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "error": {},
+    "user": {
+      "id": 4
+    },
+    "todo": {}
+  }
+}
