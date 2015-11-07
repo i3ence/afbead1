@@ -5,15 +5,19 @@
 <form class="form-horizontal" method="post">
     <fieldset>
         <div class="form-group
-            {{#if validationErrors.helyszin}}
+            {{#if validationErrors.feladat}}
                 has-error
             {{/if}}
         ">
-            <label for="helyszin" class="col-lg-2 control-label">Helyszín</label>
+            <label for="feladat" class="col-lg-2 control-label">Feladat</label>
             <div class="col-lg-10">
-                <input class="form-control" id="helyszin" name="helyszin" placeholder="pl. Csekket befizetni" type="text" value="{{data.helyszin}}">
-                {{#if validationErrors.helyszin}}
-                    <span class="help-block">{{validationErrors.helyszin.msg}}</span>
+                {{#if data.assignment}}
+                <input class="form-control" id="feladat" name="feladat" placeholder="Rövid leírás" type="text" value="{{data.assignment}}" readonly>
+                {{else}}
+                <input class="form-control" id="feladat" name="feladat" placeholder="Rövid leírás" type="text" value="{{data.assignment}}">
+                {{/if}}
+                {{#if validationErrors.feladat}}
+                    <span class="help-block">{{validationErrors.feladat.msg}}</span>
                 {{/if}}
             </div>
         </div>
@@ -22,19 +26,28 @@
                 has-error
             {{/if}}
         ">
+            <label for="allapot" class="col-lg-2 control-label">Állapot</label>
+            <div class="col-lg-10">
+                <div>
+                     <input type="radio" name="allapot" value="pending" checked />Folyamatban
+                </div>
+                <div>
+                     <input type="radio" name="allapot" value="complete"/>Kész
+                </div>
+            </div>
+            
             <label for="leiras" class="col-lg-2 control-label">Leírás</label>
             <div class="col-lg-10">
-                <textarea class="form-control" rows="3" id="leiras" name="leiras">{{data.leiras}}</textarea>
+                <textarea class="form-control" rows="3" id="leiras" name="leiras" placeholder = "Hosszabb leírás">{{data.description}}</textarea>
                 <span class="help-block">A feladat részletezése.</span>
-                {{#if validationErrors.leiras}}
-                    <span class="help-block">{{validationErrors.leiras.msg}}</span>
+                {{#if validationErrors.description}}
+                    <span class="help-block">{{validationErrors.description.msg}}</span>
                 {{/if}}
             </div>
         </div>
         <div class="form-group">
             <div class="col-lg-10 col-lg-offset-2">
-                <button type="reset" class="btn btn-default">Cancel</button>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Kész</button>
             </div>
         </div>
     </fieldset>

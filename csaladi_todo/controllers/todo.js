@@ -1,20 +1,14 @@
 var express = require('express');
 var router = express.Router();
 
-//Viewmodel réteg
 var statusTexts = {
-    'new': 'Új',
-    'assigned': 'Hozzárendelve',
-    'ready': 'Kész',
-    'rejected': 'Elutasítva',
-    'pending': 'Felfüggesztve',
+    'pending': 'Folyamatban',
+    'complete': 'Teljesítve',
 };
+
 var statusClasses = {
-    'new': 'danger',
-    'assigned': 'info',
-    'ready': 'success',
-    'rejected': 'default',
     'pending': 'warning',
+    'complete': 'success',
 };
 
 function decorateTodos(todoContainer) {
@@ -27,7 +21,6 @@ function decorateTodos(todoContainer) {
 
 router.get('/list', function (req, res) {
     req.app.models.todo.find().then(function (todos) {
-        console.log(todos);
         //megjelenítés
         res.render('todos/list', {
             todos: decorateTodos(todos),
@@ -35,6 +28,7 @@ router.get('/list', function (req, res) {
         });
     });
 });
+
 router.get('/new', function (req, res) {
     var validationErrors = (req.flash('validationErrors') || [{}]).pop();
     var data = (req.flash('data') || [{}]).pop();
@@ -44,11 +38,11 @@ router.get('/new', function (req, res) {
         data: data,
     });
 });
+
 router.post('/new', function (req, res) {
     // adatok ellenőrzése
-    req.checkBody('helyszin', 'Hibás helyszín').notEmpty().withMessage('Kötelező megadni!');
+    req.checkBody('feladat', 'Hibás feladat').notEmpty().withMessage('Kötelező megadni!');
     req.sanitizeBody('leiras').escape();
-    req.checkBody('leiras', 'Hibás leírás').notEmpty().withMessage('Kötelező megadni!');
     
     var validationErrors = req.validationErrors(true);
     console.log(validationErrors);
@@ -61,9 +55,9 @@ router.post('/new', function (req, res) {
     }
     else {
         // adatok elmentése (ld. később) és a hibalista megjelenítése
-        req.app.models.tdo.create({
-            status: 'new',
-            location: req.body.helyszin,
+        req.app.models.todo.create({
+            status: req.body.allapot,
+            assignment: req.body.feladat,
             description: req.body.leiras
         })
         .then(function (todo) {
@@ -74,6 +68,35 @@ router.post('/new', function (req, res) {
             console.log(err);
         });
     }
+});
+
+router.get('/edit/:id', function(req, res) {
+   var id = req.params.id;
+   
+   req.app.models.todo.findOne( {id: id} ).exec(function (err, data) {
+       console.log('id: ', id);
+       console.log('Editing >', data);
+       res.render('todos/new', {
+           data:data
+       });
+    });
+});
+
+router.post('/edit/:id', function(req, res) {
+    var id = req.params.id;
+    console.log('received: ', req.body);
+    req.app.models.todo.update(
+        {id: req.params.id}, {description:req.body.leiras, status: req.body.allapot})
+        .exec(function (err, data) { 
+            res.redirect('/todos/list'); 
+    }); 
+});
+
+router.get('/delete/:id', function(req, res) {
+    req.app.models.todo.destroy( {id: req.params.id} ).then(function (data) {
+        req.flash('info', 'Feladat törölve');
+        res.redirect('/todos/list');
+    });
 });
 
 module.exports = router;

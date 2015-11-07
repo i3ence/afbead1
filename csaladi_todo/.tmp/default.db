@@ -1,7 +1,44 @@
 {
   "data": {
     "error": [],
-    "todo": [],
+    "todo": [
+      {
+        "status": "pending",
+        "assignment": "asd",
+        "description": "mégisde",
+        "date": "2015-11-07T10:34:13.321Z",
+        "createdAt": "2015-11-07T10:34:13.324Z",
+        "updatedAt": "2015-11-07T16:48:52.180Z",
+        "id": 3
+      },
+      {
+        "status": "complete",
+        "assignment": "Vásárlás",
+        "description": "kifli, kenyer",
+        "date": "2015-11-07T12:38:58.889Z",
+        "createdAt": "2015-11-07T12:38:58.890Z",
+        "updatedAt": "2015-11-07T12:39:12.504Z",
+        "id": 5
+      },
+      {
+        "status": "complete",
+        "assignment": "Csekk",
+        "description": "15874 Ft",
+        "date": "2015-11-07T12:39:25.547Z",
+        "createdAt": "2015-11-07T12:39:25.548Z",
+        "updatedAt": "2015-11-07T16:48:46.834Z",
+        "id": 6
+      },
+      {
+        "status": "pending",
+        "assignment": "Mosogatás",
+        "description": "",
+        "date": "2015-11-07T16:50:33.510Z",
+        "createdAt": "2015-11-07T16:50:33.588Z",
+        "updatedAt": "2015-11-07T16:50:33.588Z",
+        "id": 7
+      }
+    ],
     "user": [
       {
         "surname": "K",
@@ -40,6 +77,22 @@
         "createdAt": "2015-11-05T18:11:58.251Z",
         "updatedAt": "2015-11-05T18:11:58.251Z",
         "id": 4
+      },
+      {
+        "name": "laci",
+        "password": "$2a$10$yNs4cgEu4QgeDR38MIc1vuv1m6A4RTc9NCdCDWKax9Sf9mDtsmcCW",
+        "role": "riporter",
+        "createdAt": "2015-11-07T21:59:23.963Z",
+        "updatedAt": "2015-11-07T21:59:23.963Z",
+        "id": 5
+      },
+      {
+        "name": "pisti",
+        "password": "$2a$10$UI6pQ9CWrsLJ23tIHv0GNugIp9gOPwIdClHSoAcJkBHnAvkRqOmce",
+        "role": "riporter",
+        "createdAt": "2015-11-07T22:06:04.726Z",
+        "updatedAt": "2015-11-07T22:06:04.726Z",
+        "id": 6
       }
     ]
   },
@@ -90,12 +143,12 @@
       "status": {
         "type": "string",
         "enum": [
-          "new",
-          "assigned",
-          "success",
-          "rejected",
-          "pending"
+          "pending",
+          "complete"
         ]
+      },
+      "assignment": {
+        "type": "string"
       },
       "description": {
         "type": "string"
@@ -152,8 +205,10 @@
   "counters": {
     "error": {},
     "user": {
-      "id": 4
+      "id": 6
     },
-    "todo": {}
+    "todo": {
+      "id": 24
+    }
   }
 }

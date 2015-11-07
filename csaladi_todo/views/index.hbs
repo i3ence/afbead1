@@ -3,5 +3,10 @@
 </div>
 
 <p>
-    Csak családtagok számára. Jelentkezz be!
+    Csak regisztrált családtagok számára.
+    {{#if loggedIn}}
+    <li><a href="/todos/list">Lista mutatása</a></li>
+    {{else}}
+    <li><a href="/login">Jelentkezz be!</a></li>
+    {{/if}}
 </p>

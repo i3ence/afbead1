@@ -1,7 +1,7 @@
 module.exports = {
     identity: 'todo',
     connection: 'default',
-    attributes: {
+    attributes:{ 
         date: {
             type: 'datetime',
             defaultsTo: function () { return new Date(); },
@@ -9,12 +9,15 @@ module.exports = {
         },
         status: {
             type: 'string',
-            enum: ['new', 'assigned', 'success', 'rejected', 'pending'],
+            enum: ['pending', 'complete'],
+            required: true,
+        },
+        assignment: {
+            type: 'string',
             required: true,
         },
         description: {
             type: 'string',
-            required: true,
         },
         user: {
             model: 'user',

@@ -12,22 +12,27 @@
 <table class="table table-striped table-hover ">
     <thead>
         <tr>
-            <th>Időpont</th>
             <th>Státusz</th>
-            <th>Helyszín</th>
+            <th>Feladat</th>
             <th>Leírás</th>
+            <th>Időpont</th>
+            <th>Szerkesztés</th>
+            <th>Törlés</th>
         </tr>   
     </thead>
     <tbody>
-        {{#each errors}}
+        {{#each todos}}
         <tr>
-            <td>{{date}}</td>
             <td><span class="label label-{{statusClass}}">{{statusText}}</span></td>
-            <td>{{location}}</td>
+            <td>{{assignment}}</td>
             <td><span class="badge">{{numberOfMessages}}</span> {{description}}</td>
+            <td>{{date}}</td>
+            <td><a href="/todos/edit/{{id}}">Szerkesztés</a></td> 
+            <td><a href="/todos/delete/{{id}}">Törlés</a></td> 
+
         </tr>
         {{/each}}
     </tbody>
 </table>
 
-<p><a href="/errors/new" class="btn btn-default">Új feladat feltöltése</a></p>
+<p><a href="/todos/new" class="btn btn-default">Új feladat feltöltése</a></p>

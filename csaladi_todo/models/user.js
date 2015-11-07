@@ -19,12 +19,6 @@ module.exports = {
             required: true,
             defaultsTo: 'riporter'
         },
-        /*
-        errors: {
-            collection: 'error',
-            via: 'user'
-        },
-        */
         todos: {
             collection: 'todo',
             via: 'user'

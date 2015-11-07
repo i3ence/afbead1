@@ -1,5 +1,3 @@
-// controllers/login.js
-
 var express = require('express');
 var passport = require('passport');
 var router = express.Router();
@@ -9,7 +7,6 @@ router.get('/', function (req, res) {
 });
 
 router.post('/', passport.authenticate('local', {
-    // successRedirect: '/errors/list',
     successRedirect: '/todos/list',
     failureRedirect: '/login',
     failureFlash: true,
