@@ -74,11 +74,11 @@ Egy TODO feltöltésének menete:
 ![new](/docs/imgs/new.jpg "new")
 
 3. Osztálymodell
-+ Adatmodell és Adatbázisterv
+  + Adatmodell és Adatbázisterv
 ![datamodel](/docs/imgs/datamodel.png "datamodel")
 
 4. Dinamikus működés
-+ Szekvenciadiagram
+  + Szekvenciadiagram
 ![szekvenciadiagram](/docs/imgs/seq_diag.png "szekvenciadiagram")
 
 ##Implementáció
