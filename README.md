@@ -1,7 +1,6 @@
 Work in Progress
 
 # Alalmazások Fejlesztése 1. beadandó
-------
 
 Készítette: Zsiga Bence Krisztián
 
@@ -23,9 +22,9 @@ Készítette: Zsiga Bence Krisztián
 + perzisztálás fájlba történjen
 + közzététel Herokun
 
-####Használatieset-modell
+###Használatieset-modell
 
-#####Szerepkörök:
+####Szerepkörök:
 Vendég:
 + regisztráció
 + bejelentkezés
@@ -35,7 +34,7 @@ Felhasználó
 + TODO-k feltöltése, törlése, szerkesztése
 + kilépés
 
-#####Használati eset diagram:
+####Használati eset diagram:
 ![modell](/docs/imgs/hemodell.png "Használatieset-modell")
 
 Folyamatok pontos menete: legalább 1 folyamat kifejtése.
@@ -45,3 +44,40 @@ Egy TODO feltöltésének menete:
 + feltöltés végelgesítése (kötelező mezők kitöltésével)
 
 ## Tervezés
+
+###Architektúra terv
+komponensdiagram
+####Oldaltérkép
++ Főoldal
+  + Bejelentkezés
+    + Regisztráció
+  + Listázás
+    + Új TODO hozzáadása
+
+####Végpontok
++ GET /: Főoldal
++ GET /login: Bejelentkezési oldal
++ POST /login: Bejelentkezési adatok beküldése
++ GET /login/signup: Regisztrációs oldal
++ POST /login/signup: Regisztrációs adatok beküldése
++ GET /todos/list: Listázási oldal
++ GET /todos/new: Új TODO-feltöltése oldal
++ POST /todos/new: Új TODO beküldése
++ GET /edit/:id: TODO szerkesztése oldal (ugyanaz, mint todos/new)
++ POST edit/:id: Szerkesztett TODO beküldése
++ GET delete/:id: Kijelölt TODO törlése
+
+
+####Felhasználóifelület-modell
+Oldalvázlatok
+Designterv (nem kell, elég a végső megvalósítás kinézete)
+
+
+Osztálymodell
+Adatmodell
+Adatbázisterv
+Állapotdiagram
+
+
+Dinamikus működés
+Szekvenciadiagram
