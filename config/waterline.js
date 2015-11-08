@@ -22,7 +22,7 @@ var config = {
         },
     },
     defaults: {
-        migrate: 'safe'
+        migrate: 'alter'
     },
 };
 
