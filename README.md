@@ -95,3 +95,14 @@ Egy TODO feltöltésének menete:
 
 ##Tesztelés
 
+Automatikus tesztek szükségesek. Nem kell teljeskörű tesztelés, a hallgató mutassa meg, hogy képes ilyen tesztek írására.
+
++ Tesztelési környezet bemutatása
+  + Egységteszt: mocha.js-sel, user modelre.
+  + Funkcionális felületi teszt: zombie.js
+Tesztesetek felsorolása: milyen eseteket próbált végig a hallgató
+![teszt](/docs/imgs/mochazombie.png "futtatott teszt")
+
+##Felhasználói Dokumentáció
++ Követelmények
+  + Chrome, Opera, Firefox, Edge/Internet Explorer böngésző
