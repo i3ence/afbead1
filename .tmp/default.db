@@ -1,0 +1,117 @@
+{
+  "data": {
+    "todo": [
+      {
+        "status": "pending",
+        "assignment": "Mosogatas",
+        "description": "",
+        "date": "2015-11-08T13:42:33.619Z",
+        "createdAt": "2015-11-08T13:42:33.620Z",
+        "updatedAt": "2015-11-08T13:42:33.620Z",
+        "id": 1
+      },
+      {
+        "status": "pending",
+        "assignment": "Szelloztetes",
+        "description": "Nappaliban is!",
+        "date": "2015-11-08T13:42:52.708Z",
+        "createdAt": "2015-11-08T13:42:52.709Z",
+        "updatedAt": "2015-11-08T13:42:52.709Z",
+        "id": 2
+      }
+    ],
+    "user": [
+      {
+        "name": "bence",
+        "password": "$2a$10$i8mHT5G94wzsTFwEJhMHMes3rhjx9vU/Xlmz1Ahi7j4CvZT8nW4bG",
+        "role": "riporter",
+        "createdAt": "2015-11-08T13:42:15.092Z",
+        "updatedAt": "2015-11-08T13:42:15.092Z",
+        "id": 1
+      },
+      {
+        "name": "pisti",
+        "password": "$2a$10$kNNTTti2T3Kg2oS8FE/Oz.fiiLY3W30ReFjvB3ofz1B6XGpu.DyXa",
+        "role": "riporter",
+        "createdAt": "2015-11-08T13:43:30.755Z",
+        "updatedAt": "2015-11-08T13:43:30.755Z",
+        "id": 2
+      }
+    ]
+  },
+  "schema": {
+    "todo": {
+      "date": {
+        "type": "datetime"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "pending",
+          "complete"
+        ]
+      },
+      "assignment": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "user": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "user": {
+      "name": {
+        "type": "string",
+        "unique": true
+      },
+      "password": {
+        "type": "string"
+      },
+      "role": {
+        "type": "string",
+        "enum": [
+          "riporter",
+          "operator"
+        ],
+        "defaultsTo": "riporter"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "todo": {
+      "id": 2
+    },
+    "user": {
+      "id": 2
+    }
+  }
+}

@@ -12,16 +12,25 @@
     "express-validator": "^2.17.1",
     "hbs": "^3.1.1"
   },
-  "name": "csaladi_todo",
+  "name": "afbead1",
   "version": "1.0.0",
   "main": "server.js",
   "directories": {
+    "doc": "docs",
     "test": "test"
   },
   "devDependencies": {
     "mocha": "^2.3.3"
   },
-  "author": "",
+  "author": "Bence Zsiga",
   "license": "ISC",
-  "description": ""
+  "description": "Work in Progress",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i3ence/afbead1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/i3ence/afbead1/issues"
+  },
+  "homepage": "https://github.com/i3ence/afbead1#readme"
 }
