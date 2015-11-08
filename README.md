@@ -10,29 +10,29 @@ Készítette: Zsiga Bence Krisztián
 ###Feladat:
 
 ####Funkcionális elvárások:
-+legalább két modellt, egy-sok kapcsolatban
-+legalább 1 űrlapot
-+legalább 1 listázó oldalt
-+legyen lehetőség új felvételére
-+legyen lehetőség meglévő szerkesztésére
-+legyen lehetőség meglévő törlésére
++ legalább két modellt, egy-sok kapcsolatban
++ legalább 1 űrlapot
++ legalább 1 listázó oldalt
++ legyen lehetőség új felvételére
++ legyen lehetőség meglévő szerkesztésére
++ legyen lehetőség meglévő törlésére
 
 ####Nem funkcionális követelmények
-+legyenek benne csak hitelesítés után elérhető funkciók
-+perzisztálás fájlba történjen
-+közzététel Herokun
++ legyenek benne csak hitelesítés után elérhető funkciók
++ perzisztálás fájlba történjen
++ közzététel Herokun
 
 ####Használatieset-modell
 
 #####Szerepkörök: lista rövid leírással
 Vendég:
-+regisztráció
-+bejelentkezés
++ regisztráció
++ bejelentkezés
 
 Felhasználó
-+TODO-k listázása
-+TODO-k feltöltése, törlése, szerkesztése
-+kilépés
++ TODO-k listázása
++ TODO-k feltöltése, törlése, szerkesztése
++ kilépés
 
 #####Használati eset diagram:
 ![modell](/docs/imgs/hemodell.png "Használatieset-modell")
