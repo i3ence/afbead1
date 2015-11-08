@@ -102,4 +102,6 @@ Egy TODO feltöltésének menete:
 
 ##Felhasználói Dokumentáció
 + Követelmények
-  + Chrome, Opera, Firefox, Edge/Internet Explorer böngésző
+  + 2GB memória
+  + 1GB HDD
++ Letöltés a 'git clone https://github.com/i3ence/afbead1.git' paracssal
