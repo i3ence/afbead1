@@ -1,9 +1,10 @@
 Work in Progress
 
 # Alalmazások Fejlesztése 1. beadandó
+------
 
 Készítette: Zsiga Bence Krisztián
-------
+
 
 ## Követelményanalízis
 
@@ -24,7 +25,7 @@ Készítette: Zsiga Bence Krisztián
 
 ####Használatieset-modell
 
-#####Szerepkörök: lista rövid leírással
+#####Szerepkörök:
 Vendég:
 + regisztráció
 + bejelentkezés
