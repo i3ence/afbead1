@@ -46,25 +46,25 @@ Egy TODO feltöltésének menete:
 ## Tervezés
 
 1. Architektúra terv
-+  Oldaltérkép
-  + Főoldal
-    + Bejelentkezés
-      + Regisztráció
-    + Listázás
-      + Új TODO hozzáadása
+  +  Oldaltérkép
+    + Főoldal
+      + Bejelentkezés
+        + Regisztráció
+      + Listázás
+        + Új TODO hozzáadása
 
-+ Végpontok
-  + GET /: Főoldal
-  + GET /login: Bejelentkezési oldal
-  + POST /login: Bejelentkezési adatok beküldése
-  + GET /login/signup: Regisztrációs oldal
-  + POST /login/signup: Regisztrációs adatok beküldése
-  + GET /todos/list: Listázási oldal
-  + GET /todos/new: Új TODO-feltöltése oldal
-  + POST /todos/new: Új TODO beküldése
-  + GET /edit/:id: TODO szerkesztése oldal (ugyanaz, mint todos/new)
-  + POST edit/:id: Szerkesztett TODO beküldése
-  + GET delete/:id: Kijelölt TODO törlése
+  + Végpontok
+    + GET /: Főoldal
+    + GET /login: Bejelentkezési oldal
+    + POST /login: Bejelentkezési adatok beküldése
+    + GET /login/signup: Regisztrációs oldal
+    + POST /login/signup: Regisztrációs adatok beküldése
+    + GET /todos/list: Listázási oldal
+    + GET /todos/new: Új TODO-feltöltése oldal
+    + POST /todos/new: Új TODO beküldése
+    + GET /edit/:id: TODO szerkesztése oldal (ugyanaz, mint todos/new)
+    + POST edit/:id: Szerkesztett TODO beküldése
+    + GET delete/:id: Kijelölt TODO törlése
 
 
 2. Felhasználóifelület-modell
@@ -82,3 +82,16 @@ Egy TODO feltöltésének menete:
   + ![szekvenciadiagram](/docs/imgs/seq_diag.png "szekvenciadiagram")
 
 ##Implementáció
+
++ Fejlesztői környezet
+  + Cloud9 IDE (c9.io)
++ Könyvtárstruktúra
+  + config: Waterline.js beállításai
+  + controllers: Kérések irányítása, feldolgozása
+  + models: osztálymodellek
+  + node_modules: telepített npm modulok
+  + test: tesztfájlok
+  + views: Handlebars sémák
+
+##Tesztelés
+
