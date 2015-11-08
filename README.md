@@ -35,7 +35,7 @@ Felhasználó
 +kilépés
 
 #####Használati eset diagram:
-![modell](/docs/images/hemodell.png "Használatieset-modell")
+![modell](/docs/imgs/hemodell.png "Használatieset-modell")
 
 Folyamatok pontos menete: legalább 1 folyamat kifejtése.
 Egy TODO feltöltésének menete:
