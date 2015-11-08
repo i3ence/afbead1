@@ -45,39 +45,40 @@ Egy TODO feltöltésének menete:
 
 ## Tervezés
 
-###Architektúra terv
-komponensdiagram
-####Oldaltérkép
-+ Főoldal
-  + Bejelentkezés
-    + Regisztráció
-  + Listázás
-    + Új TODO hozzáadása
+1. Architektúra terv
++  Oldaltérkép
+  + Főoldal
+    + Bejelentkezés
+      + Regisztráció
+    + Listázás
+      + Új TODO hozzáadása
 
-####Végpontok
-+ GET /: Főoldal
-+ GET /login: Bejelentkezési oldal
-+ POST /login: Bejelentkezési adatok beküldése
-+ GET /login/signup: Regisztrációs oldal
-+ POST /login/signup: Regisztrációs adatok beküldése
-+ GET /todos/list: Listázási oldal
-+ GET /todos/new: Új TODO-feltöltése oldal
-+ POST /todos/new: Új TODO beküldése
-+ GET /edit/:id: TODO szerkesztése oldal (ugyanaz, mint todos/new)
-+ POST edit/:id: Szerkesztett TODO beküldése
-+ GET delete/:id: Kijelölt TODO törlése
-
-
-####Felhasználóifelület-modell
-Oldalvázlatok
-Designterv (nem kell, elég a végső megvalósítás kinézete)
++ Végpontok
+  + GET /: Főoldal
+  + GET /login: Bejelentkezési oldal
+  + POST /login: Bejelentkezési adatok beküldése
+  + GET /login/signup: Regisztrációs oldal
+  + POST /login/signup: Regisztrációs adatok beküldése
+  + GET /todos/list: Listázási oldal
+  + GET /todos/new: Új TODO-feltöltése oldal
+  + POST /todos/new: Új TODO beküldése
+  + GET /edit/:id: TODO szerkesztése oldal (ugyanaz, mint todos/new)
+  + POST edit/:id: Szerkesztett TODO beküldése
+  + GET delete/:id: Kijelölt TODO törlése
 
 
-Osztálymodell
-Adatmodell
-Adatbázisterv
-Állapotdiagram
+2. Felhasználóifelület-modell
+  + Oldalvázlatok
+![index](/docs/imgs/index.jpg "index")
+![list](/docs/imgs/list.jpg "list")
+![new](/docs/imgs/new.jpg "new")
 
+3. Osztálymodell
+Adatmodell és Adatbázisterv
+![datamodel](/docs/imgs/datamodel.png "datamodel")
 
-Dinamikus működés
+4. Dinamikus működés
 Szekvenciadiagram
+![szekvenciadiagram](/docs/imgs/seq_diag.png "szekvenciadiagram")
+
+##Implementáció
