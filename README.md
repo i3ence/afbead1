@@ -1,6 +1,7 @@
 Work in Progress
 
 # Alalmazások Fejlesztése 1. beadandó
+
 Készítette: Zsiga Bence Krisztián
 ------
 
