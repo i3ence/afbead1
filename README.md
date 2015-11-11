@@ -110,6 +110,6 @@ Egy TODO feltöltésének menete:
   + A belépés menüpontot választva beléphetünk korában megadott adatainkkal. Ha még ezt nem tettük volna meg, regisztrálásra is lehetőségünk van, az oldal alján található gombbal.
   + Belépés után láthatóvá válik a feladatok listája. Itt szabadon adhatunk hozzá, szerkeszthetünk vagy törölhetünk feladatokat.
     + Feladat hozzáadását az alsó 'Új feladat feltöltése' gombbal kezdhetjük meg. Ekkor egy új oldalon a feladat nevét (kötelező!) megadva, már be is küldhetjünk azt. Ha szeretnénk kiegészíteni, pontosítani, használjuk a leírás mezőt.
-    + A szerkesztés a hozzáadáshoz hasonló  módon működik a feladat sorában található linkre kattintással. Ekkor már nem változtathatunk feladatunk nevén. így állíthatjuk állapotát teljesítettre is.
+    + A szerkesztés a hozzáadáshoz hasonló  módon működik a feladat sorában található linkre kattintással. Ekkor már nem változtathatunk feladatunk nevén. Így állíthatjuk állapotát teljesítettre is.
     + A törlést a feladat melletti gombbal hajthatjuk végre.
-  + Az alkalmazás lehetőséget nyújt a kilépésre is, ezt ajánlott megtenni, ha befejeztük az oldal használatát.
+  + Az alkalmazás lehetőséget nyújt a fiókból való kilépésre is, ezt ajánlott megtenni, ha befejeztük az oldal használatát.
