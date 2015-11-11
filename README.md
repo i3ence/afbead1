@@ -42,6 +42,7 @@ Egy TODO feltöltésének menete:
 + belépés (az oldal átirányít a listára)
 + feltöltés megkezdése (a lista alján található gombbal)
 + feltöltés végelgesítése (kötelező mezők kitöltésével)
+![folyamatábra](/docs/imgs/folyamatabra.png "Folyamatábra")
 
 ## Tervezés
 

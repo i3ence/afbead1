@@ -18,6 +18,15 @@
         "createdAt": "2015-11-08T13:42:52.709Z",
         "updatedAt": "2015-11-08T13:42:52.709Z",
         "id": 2
+      },
+      {
+        "status": "pending",
+        "assignment": "bevasarlas",
+        "description": "kenyer",
+        "date": "2015-11-11T08:33:32.025Z",
+        "createdAt": "2015-11-11T08:33:32.027Z",
+        "updatedAt": "2015-11-11T08:33:32.027Z",
+        "id": 3
       }
     ],
     "user": [
@@ -108,7 +117,7 @@
   },
   "counters": {
     "todo": {
-      "id": 2
+      "id": 3
     },
     "user": {
       "id": 2
